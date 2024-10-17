@@ -1,0 +1,112 @@
+﻿
+<body>
+    <div class="page-wrapper">
+        <main class="main-wrapper">
+            <header class="content-wrap">
+                <div class="padding-global">
+                    <div class="container-medium">
+                        <div class="padding-section-small">
+                            <div class="w-layout-grid content-grid">
+
+                                @await Html.PartialAsync("_SideBarContentPartial")
+
+                                <div class="main-content">
+                                    <div class="inner-content">
+                                        <div class="inner-content-group">
+                                            <div class="page-title-group">
+                                                <h1 class="heading-style-h2">😎 Account settings</h1>
+                                                <p class="text-color-grey">The community loves a good profile</p>
+                                            </div>
+                                            <div class="divider wf-section"></div>
+                                        </div>
+                                        <div class="inner-content-group gap-32px">
+                                            <div class="w-layout-grid _2-col-grid settings">
+                                                <div class="content-wrap">
+                                                    <h2 class="heading-style-h5">Profile Information</h2>
+                                                    <p class="text-color-grey">Update your account's profile information and email address.</p>
+                                                </div>
+                                                <div class="form_component w-form">
+                                                    <form id="wf-form-Form" name="wf-form-Form" data-name="Form" method="get" class="form_form">
+                                                        <div class="form_field-wrapper">
+                                                            <label for="Full-name" class="form_label">Full name</label>
+                                                            <input type="text" class="form_input w-input" maxlength="256" name="Full-name" data-name="Full name" placeholder="James Baduor" id="Full-name">
+                                                        </div>
+                                                        <div class="form_field-wrapper">
+                                                            <label for="Email-address" class="form_label">Email address</label>
+                                                            <input type="text" class="form_input w-input" maxlength="256" name="Email-address" data-name="Email address" placeholder="james@email.com" id="Email-address">
+                                                        </div>
+                                                        <input type="submit" value="Save changes" data-wait="Please wait..." class="button is-form-submit w-button">
+                                                    </form>
+                                                    <div class="form_message-success w-form-done">
+                                                        <div>Thank you! Your submission has been received!</div>
+                                                    </div>
+                                                    <div class="form_message-error w-form-fail">
+                                                        <div>Oops! Something went wrong while submitting the form.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="divider wf-section"></div>
+                                        </div>
+                                        <div class="inner-content-group gap-32px">
+                                            <div class="w-layout-grid _2-col-grid settings">
+                                                <div class="content-wrap">
+                                                    <h2 class="heading-style-h5">Update Password</h2>
+                                                    <p class="text-color-grey">Ensure your account is using a long, random password to stay secure.</p>
+                                                </div>
+                                                <div class="form_component w-form">
+                                                    <form id="wf-form-Form" name="wf-form-Form" data-name="Form" method="get" class="form_form">
+                                                        <div class="form_field-wrapper">
+                                                            <label for="Full-name-2" class="form_label">Current Password</label>
+                                                            <input type="password" class="form_input w-input" maxlength="256" name="Full-name-2" data-name="Full Name 2" placeholder="" id="Full-name-2">
+                                                        </div>
+                                                        <div class="form_field-wrapper">
+                                                            <label for="New-Password" class="form_label">Full name</label>
+                                                            <input type="password" class="form_input w-input" maxlength="256" name="New-Password" data-name="New Password" placeholder="" id="New-Password">
+                                                        </div>
+                                                        <div class="form_field-wrapper">
+                                                            <label for="Confirm-Password" class="form_label">Confirm Password</label>
+                                                            <input type="password" class="form_input w-input" maxlength="256" name="Confirm-Password" data-name="Confirm Password" placeholder="" id="Confirm-Password">
+                                                        </div>
+                                                        <input type="submit" value="Save changes" data-wait="Please wait..." class="button is-form-submit w-button">
+                                                    </form>
+                                                    <div class="form_message-success w-form-done">
+                                                        <div>Thank you! Your submission has been received!</div>
+                                                    </div>
+                                                    <div class="form_message-error w-form-fail">
+                                                        <div>Oops! Something went wrong while submitting the form.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="divider wf-section"></div>
+                                        </div>
+                                        <div class="inner-content-group gap-32px">
+                                            <div class="w-layout-grid _2-col-grid settings">
+                                                <div class="content-wrap">
+                                                    <h2 class="heading-style-h5">Delete Account</h2>
+                                                    <p class="text-color-grey">Permanently delete your account.</p>
+                                                </div>
+                                                <div class="form_component w-form">
+                                                    <form id="wf-form-Form" name="wf-form-Form" data-name="Form" method="get" class="form_form">
+                                                        <p class="text-color-grey">Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain.</p>
+                                                        <input type="submit" value="Delete my account" data-wait="Please wait..." class="button is-form-submit margin-top margin-medium background-danger w-button">
+                                                    </form>
+                                                    <div class="form_message-success w-form-done">
+                                                        <div>Thank you! Your submission has been received!</div>
+                                                    </div>
+                                                    <div class="form_message-error w-form-fail">
+                                                        <div>Oops! Something went wrong while submitting the form.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </main>
+    </div>
+</body>

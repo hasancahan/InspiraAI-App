@@ -1,0 +1,82 @@
+﻿<link href="~/css/gridcard.css" rel="stylesheet" />
+
+
+
+<div class="anim_ins">
+
+    <div style="text-align:center;" id="scrollButton"><i class="fa-solid fa-circle-down fa-fade fa-2xl animated-icon"></i></div>
+    <br />
+
+    <div class="img_index"><img src="~/content/image/inspira_ai_image_index.png" /></div>
+    <br />
+    <br />
+
+    <div style="text-align:center;">
+        <span>Yaratıcılığınızı AI ile Yeniden Keşfedin</span>
+        <h2>Team</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi, praesentium veritatis voluptatibus ut consequuntur quas consequatur omnis id rem obcaecati.</p>
+    </div>
+
+    <main id="target" class="page-content">
+        <div class="card">
+            <div class="content">
+                <h2 class="title">Writing Reading Arts</h2>
+                <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p>
+                <button class="btn">View Trips</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="content">
+                <h2 class="title">Visual Arts</h2>
+                <p class="copy">Plan your next beach trip with these fabulous destinations</p>
+                <button class="btn">View Trips</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="content">
+                <h2 class="title">Cinema Screenplay Arts</h2>
+                <p class="copy">It's the desert you've always dreamed of</p>
+                <button class="btn">Book Now</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="content">
+                <h2 class="title">Musical Arts</h2>
+                <p class="copy">Seriously, straight up, just blast off into outer space today</p>
+                <button class="btn">Book Now</button>
+            </div>
+        </div>
+    </main>
+</div>
+
+
+<br />
+<br />
+
+<script>
+    document.getElementById("scrollButton").onclick = function () {
+        const target = document.getElementById("target");
+        const targetPosition = target.getBoundingClientRect().top + window.scrollY; // Hedef konumu
+        const startPosition = window.scrollY; // Başlangıç konumu
+        const distance = targetPosition - startPosition; // Mesafe
+        const duration = 1000; // Animasyon süresi (ms)
+        let startTime = null;
+
+        function animation(currentTime) {
+            if (startTime === null) startTime = currentTime;
+            const timeElapsed = currentTime - startTime;
+            const run = ease(timeElapsed, startPosition, distance, duration);
+            window.scrollTo(0, run);
+            if (timeElapsed < duration) requestAnimationFrame(animation);
+        }
+
+        function ease(t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return c / 2 * t * t + b;
+            t--;
+            return -c / 2 * (t * (t - 2) - 1) + b;
+        }
+
+        requestAnimationFrame(animation);
+    };
+</script>
